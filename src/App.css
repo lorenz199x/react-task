@@ -31,7 +31,7 @@
   color: #ccc;
   font-weight: 300;
   text-align: center;
-  margin: 50px 20px 60px 20px;
+  margin: 20px 20px 20px 20px;
   font-family: 'Josefin Slab', serif;
 }
 
@@ -54,7 +54,7 @@
 .list {
   width: 90%;
   margin: auto;
-  max-height: 300px;
+  max-height: 250px;
   overflow: hidden;
   overflow-y: auto;
 }
@@ -93,6 +93,7 @@
 
 .buttons {
   display: flex;
+  padding-left: 75px;
 }
 
 .btn {

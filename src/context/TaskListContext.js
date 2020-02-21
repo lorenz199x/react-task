@@ -4,14 +4,13 @@ import ActionDAO from '../dao/ActionDao'
 import { useImmer } from 'use-immer'
 import { toast } from 'react-toastify'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { clearExpenses } from '../redux/actions/index';
 
 let actionDao
 export const TaskListContext = createContext()
 
 const TaskListContextProvider = props => {
-  // const localState = JSON.parse(localStorage.getItem('tasks')) || []
-  // localStorage.setItem('tasks', JSON.stringify(tasks))
-
   const [tasks, setTasks] = useState([])
   const [editItem, setEditItem] = useState(null)
 
@@ -22,7 +21,7 @@ const TaskListContextProvider = props => {
   }
 
   const clearList = () => {
-    setTasks([])
+    props.clearExpenses()
   }
 
   const findItem = key => {
@@ -33,7 +32,7 @@ const TaskListContextProvider = props => {
   const editTask = (title, key) => {
     const newTasks = props.expenses.map(expense => (expense.key === key ? { title, key } : expense))
     setTasks(newTasks)
-    setEditItem(null) // for clearing input
+    setEditItem(null)
   }
 
   return (
@@ -48,4 +47,11 @@ const mapStateToProps = (state) => {
     expenses: state.expenses.list
   }
 }
-export default connect(mapStateToProps, null)(TaskListContextProvider);
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({
+    clearExpenses
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(TaskListContextProvider);

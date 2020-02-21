@@ -11,6 +11,10 @@ function expenseReducer(state = initialState, action) {
       }
     }
 
+    case 'CLEAR_EXPENSES': {
+      return initialState
+    }
+
     default:
       return state
   }

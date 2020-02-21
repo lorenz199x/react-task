@@ -4,3 +4,9 @@ export const onGetExpenses = (args) => {
     payload: args
   }
 }
+
+export const clearExpenses = () => {
+  return {
+    type: 'CLEAR_EXPENSES'
+  }
+}
