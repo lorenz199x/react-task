@@ -43,13 +43,9 @@ const TaskListContextProvider = props => {
   )
 }
 
-
-// export default TaskListContextProvider
-
 const mapStateToProps = (state) => {
   return {
     expenses: state.expenses.list
   }
 }
-
 export default connect(mapStateToProps, null)(TaskListContextProvider);

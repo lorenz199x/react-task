@@ -4,10 +4,3 @@ export const onGetExpenses = (args) => {
     payload: args
   }
 }
-
-export const addExpense = (args) => {
-  return {
-    type: 'ADD_EXPENSE',
-    payload: args
-  }
-}
