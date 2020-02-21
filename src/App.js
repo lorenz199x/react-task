@@ -1,15 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import TaskList from '../src/components/TaskList'
+import TaskForm from '../src/components/TaskForm'
+import Header from '../src/components/Header'
+import TaskListContextProvider from '../src/context/TaskListContext'
+import './App.css'
+import firebase from './firebase'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
-  );
+    <TaskListContextProvider>
+      <div className='container'>
+        <div className='app-wrapper'>
+          <Header />
+          <div className='main'>
+            <TaskForm />
+            <TaskList />
+          </div>
+        </div>
+      </div>
+    </TaskListContextProvider>
+  )
+
+
 }
 
-export default App;
+export default App

@@ -1,25 +1,54 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { TaskListContext } from '../context/TaskListContext'
 import Task from './Task'
+import ActionDAO from '../dao/ActionDao'
+import { useImmer } from 'use-immer'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { onGetExpenses } from '../redux/actions/index';
 
-const TaskList = () => {
-  const { tasks } = useContext(TaskListContext)
+let actionDao
+const TaskList = (props) => {
+  const initialState = {
+    expense: []
+  }
+  const [state, setState] = useImmer(initialState)
+
+  useEffect(() => {
+    actionDao = new ActionDAO('Expenses')
+    actionDao.fetchExpenses((obj, arr) => {
+      props.onGetExpenses(arr)
+    })
+  }, [])
+
   return (
     <div>
-    {
-      tasks.length ? (
-        <ul className='list'>
-        {tasks.map((task) => {
-          return <Task task={task} key={task.id}/>
-        })}
-      </ul>
-      ) : (
-        <div className='no-task'>No Data</div>
-      )
-    }
-      
+      {
+        props.expenses && props.expenses.length !== null ? (
+          <ul className='list'>
+            {props.expenses.map((expense, index) => {
+              return <Task expense={expense} key={expense.key} />
+            })}
+          </ul>
+        ) : (
+            <div className='no-task'>No Data</div>
+          )
+      }
     </div>
   )
 }
 
-export default TaskList
+
+const mapStateToProps = (state) => {
+  return {
+    expenses: state.expenses.list
+  }
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({
+    onGetExpenses
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(TaskList);

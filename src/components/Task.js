@@ -1,18 +1,18 @@
 import React, { useContext } from 'react'
 import TaskListContextProvider, { TaskListContext } from '../context/TaskListContext'
 
-const Task = ({task}) => {
+const Task = ({expense}) => {
   const { removeTask, findItem } = useContext(TaskListContext)
   return (
     <div>
       <li className='list-item'>
-        <span>{task.title}</span>
+        <span>{expense.title}</span>
         <div>
-          <button className='btn-delete task-btn' onClick={() => removeTask(task.id)}>
+          <button className='btn-delete task-btn' onClick={() => removeTask(expense.key)}>
             <i className='fas fa-trash-alt'></i>
           </button>
 
-          <button className='btn-edit task-btn' onClick={() => findItem(task.id)}>
+          <button className='btn-edit task-btn' onClick={() => findItem(expense.key)}>
             <i className='fas fa-pen'></i>
           </button>
 
