@@ -66,3 +66,30 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Setup this Project
+Step 1 : Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-redux-template.git"
+Step 2 : After that in yout terminal go inside the react-task folder.
+Step 3 : Terminal: type "npm install"
+Step 4 : Then try to run this project using "yarn start"
+
+### Create Firebase Account
+Step 1 : Create a Firebase project.
+Step 2 : Register your app with Firebase.
+Step 3 : Add Firebase SDKs and initialize Firebase. Firebase config object.
+Step 4 : (Optional) Install CLI and deploy to Firebase Hosting.
+Step 5 : Access Firebase in your app.
+
+** IMPORTANT: firebase config it depends on your setup so you need to paste your own config.
+
+### Technology used
+1. Firebase For Storing of data.
+2. React js/Redux/React Hooks
+3. Database Schema: 
+      title: string
+      category: string
+      description: string
+      date: string
+      value: string
+      key: string
+4. GIT Repo: https://github.com/lorenz199x/react-task.git
