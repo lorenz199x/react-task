@@ -68,18 +68,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ### Setup this Project
-Step 1 : Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-task.git"
-Step 2 : After that in yout terminal go inside the react-task folder.
-Step 3 : Go to branch Firebase/Redux_v2 make sure that your using this branch. to clone use this command: "git clone -branch new_feature git://remoterepository.git"
-Step 4 : Terminal: type "npm install"
-Step 5 : Then try to run this project using "yarn start"
+1. Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-task.git"
+2. After that in yout terminal go inside the react-task folder.
+3. Go to branch Firebase/Redux_v2 make sure that your using this branch. to clone use this command: "git clone -branch new_feature git://remoterepository.git"
+4. Terminal: type "npm install"
+5. Then try to run this project using "yarn start"
 
 ### Create Firebase Account
-Step 1 : Create a Firebase project.
-Step 2 : Register your app with Firebase.
-Step 3 : Add Firebase SDKs and initialize Firebase. Firebase config object.
-Step 4 : (Optional) Install CLI and deploy to Firebase Hosting.
-Step 5 : Access Firebase in your app.
+1. Create a Firebase project.
+2. Register your app with Firebase.
+3. Add Firebase SDKs and initialize Firebase. Firebase config object.
+4. (Optional) Install CLI and deploy to Firebase Hosting.
+5. Access Firebase in your app.
 
 ** IMPORTANT: firebase config it depends on your setup so you need to paste your own config.
 
