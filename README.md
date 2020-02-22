@@ -70,7 +70,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Setup this Project
 1. Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-task.git"
 2. After that in yout terminal go inside the react-task folder.
-3. Go to branch Firebase/Redux_v2 make sure that your using this branch. to clone use this command: "git clone -branch new_feature git://remoterepository.git"
+3. Go to branch Firebase/Redux_v2 make sure that your using this branch. Use this command: "git checkout Firebase/Redux_v2"
 4. Terminal: type "npm install"
 5. Then try to run this project using "yarn start"
 
