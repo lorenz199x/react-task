@@ -68,10 +68,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ### Setup this Project
-Step 1 : Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-redux-template.git"
+Step 1 : Open your terminal and Clone this repo: "git clone https://github.com/lorenz199x/react-task.git"
 Step 2 : After that in yout terminal go inside the react-task folder.
-Step 3 : Terminal: type "npm install"
-Step 4 : Then try to run this project using "yarn start"
+Step 3 : Go to branch Firebase/Redux_v2 make sure that your using this branch. to clone use this command: "git clone -branch new_feature git://remoterepository.git"
+Step 4 : Terminal: type "npm install"
+Step 5 : Then try to run this project using "yarn start"
 
 ### Create Firebase Account
 Step 1 : Create a Firebase project.
